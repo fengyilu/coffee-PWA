@@ -6,15 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="manifest" href="manifest.json" />
-    <!-- ios support -->
-    <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
-    <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
     <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
     <meta name="theme-color" content="#db4938" />
     <link rel="stylesheet" href="css/style.css" />
@@ -26,15 +17,9 @@
         <nav>
             <div class="columns">
                 <div class="column">
-                  <p><button type="button" onclick="getStream('video')">Grab video</button></p>
-                  
-                  <video controls autoplay style="height:180px; width: 240px;"></video>
-                </div>
-                <div class="column">
-                  <p><button type="button" onclick="getStream('audio')">Grab audio</button></p>
-                  
-                  <audio controls></audio>
-                </div>
+                    <video autoplay style="height:180px; width: 240px;" poster="https://image.freepik.com/free-icon/video-camera-symbol_318-40225.png"></video>
+                    <p><button onclick="getStream()">Grab video & start recording</button></p>
+                    <p><button onclick="download()">Download!</button></p>
               </div>
         </nav>
         <div class="container"></div>
