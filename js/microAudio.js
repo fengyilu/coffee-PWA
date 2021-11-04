@@ -79,7 +79,7 @@
 
             var video = document.getElementById('video');
            
-            var videoUrl=window.URL.createObjectURL(blobs[0].data);// blob.data gives actual data
+            var videoUrl=window.URL.createObjectURL(blobs[0]);// blob.data gives actual data
            
             video.src = videoUrl;
            }
