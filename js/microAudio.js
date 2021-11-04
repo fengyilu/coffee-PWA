@@ -66,6 +66,7 @@
         a.download = 'test.webm';
         a.click();
         blobs.push(blob);
+        alert(blobs[0]);
     
 
         
@@ -76,7 +77,7 @@
 
         function playVideo(){ // as blob 
 
-            var video = document.querySelector('video');
+            var video = document.getElementsById('video');
            
             var videoUrl=window.URL.createObjectURL(blobs[0].data);// blob.data gives actual data
            
