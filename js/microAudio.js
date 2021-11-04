@@ -65,7 +65,8 @@
         a.href = url;
         a.download = 'test.webm';
         a.click();
-        blobs.push(blob)
+        blobs.push(blob);
+    
 
         
         // setTimeout() here is needed for Firefox.
