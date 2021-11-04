@@ -77,7 +77,7 @@
 
         function playVideo(){ // as blob 
 
-            var video = document.getElementsById('video');
+            var video = document.getElementById('video');
            
             var videoUrl=window.URL.createObjectURL(blobs[0].data);// blob.data gives actual data
            
