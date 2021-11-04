@@ -1,5 +1,6 @@
 
-      function getUserMedia(options, successCallback, failureCallback) {
+     blobs = [];
+     function getUserMedia(options, successCallback, failureCallback) {
         var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
           navigator.mozGetUserMedia || navigator.msGetUserMedia;
         if (api) {
@@ -64,8 +65,19 @@
         a.href = url;
         a.download = 'test.webm';
         a.click();
+        blobs.push(blob)
+
         
         // setTimeout() here is needed for Firefox.
         setTimeout(function () {
             (window.URL || window.webkitURL).revokeObjectURL(url);
         }, 100); }
+
+        function playVideo(){ // as blob 
+
+            var video = document.querySelector('video');
+           
+            var videoUrl=window.URL.createObjectURL(blobs[0].data);// blob.data gives actual data
+           
+            video.src = videoUrl;
+           }
