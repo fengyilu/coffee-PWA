@@ -1,6 +1,6 @@
 
 var blobs = [];
-var localstorage = []
+var localstorage = window.localStorage;
 function getUserMedia(options, successCallback, failureCallback) {
     var api = navigator.getUserMedia || navigator.webkitGetUserMedia ||
         navigator.mozGetUserMedia || navigator.msGetUserMedia;
