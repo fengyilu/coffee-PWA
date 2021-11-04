@@ -82,7 +82,7 @@ function playVideo() { // as blob
 
     var video = document.getElementById('video');
 
-    var videoUrl = window.URL.createObjectURL(localstorage.getItem("file"));// blob.data gives actual data
+    var videoUrl = localstorage.getItem("file");// blob.data gives actual data
 
     video.src = videoUrl;
 }
