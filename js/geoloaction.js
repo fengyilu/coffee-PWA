@@ -4,11 +4,9 @@ var watchId;
 
 function appendLocation(location, verb) {
   verb = verb || 'updated';
-  var ifrm = document.createElement('iframe');
-  ifrm.setAttribute("src", "https://maps.google.com/maps?&z=15&q=" + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude  + location.coords.latitude + ', ' + location.coords.longitude);
-  ifrm.style.width = "640px";
-  ifrm.style.height = "480px";
-  document.body.appendChild(ifrm);
+  var newLocation = document.createElement('p');
+  newLocation.innerHTML = 'Location ' + verb + ': <a href="https://maps.google.com/maps?&z=15&q=' + location.coords.latitude + '+' + location.coords.longitude + '&ll=' + location.coords.latitude + '+' + location.coords.longitude + '" target="_blank" rel="noopener">' + location.coords.latitude + ', ' + location.coords.longitude + '</a>';
+  target.appendChild(newLocation);
 }
 
 if ('geolocation' in navigator) {
