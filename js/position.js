@@ -19,3 +19,17 @@ function deviceOrientationHandler (eventData) {
   logo.style.MozTransform = "rotate(" + tiltLR + "deg)";
   logo.style.transform = "rotate(" + tiltLR + "deg) rotate3d(1,0,0, " + (tiltFB * -1) + "deg)";
 }
+
+function requestOrientationPermission(){
+    DeviceOrientationEvent.requestPermission()
+    .then(response => {
+        if (response == 'granted') {
+            window.addEventListener('deviceorientation', (e) => {
+                document.getElementById("doTiltFB").innerHTML = Math.round(e.acceleration.x, 2);
+                document.getElementById("doTiltLR").innerHTML = Math.round(e.acceleration.y, 2);
+                document.getElementById("doTiltLR").innerHTML = Math.round(e.acceleration.z, 2);
+            })
+        }
+    })
+    .catch(console.error)
+}
