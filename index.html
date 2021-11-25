@@ -57,25 +57,31 @@
         <div class="container"></div>
         <div class="columns">
             <div class="column">
-              <button class="btn-file">
-                Choose some files to read<br>(File API) <input type="file" onchange="readFiles(this.files)" multiple>
-              </button>
-              
-              <p>Number of selected files: <b id="count">N/A</b></p>
+                <button class="btn-file">
+                    Choose some files to read<br>(File API) <input type="file" onchange="readFiles(this.files)"
+                        multiple>
+                </button>
+
+                <p>Number of selected files: <b id="count">N/A</b></p>
             </div>
             <div class="column">
-              <button class="btn-file" onclick="writeFile()">
-                Choose file to create or overwrite<br>(Native File System API)
-              </button>
+                <button class="btn-file" onclick="writeFile()">
+                    Choose file to create or overwrite<br>(Native File System API)
+                </button>
             </div>
-          </div>          
-          <p>
+        </div>
+        <p>
             <button onclick="readContacts()">Read Contacts</button>
-          </p>
-          
-          <pre id="log"></pre>
+        </p>
+
+        <pre id="log"></pre>
+        <p>Current permission status is <b id="status">unavailable</b>.</p>
+        <p><button onclick="requestPermission()">Request permission</button></p>
+        <p><button onclick="nonPersistentNotification()">Non-persistent notification</button></p>
+        <p><button onclick="persistentNotification()">Persistent notification</button></p>
     </main>
     <script src="js/app.js"></script>
+    <script src="js/notification.js"></script>
     <script src="js/serviceWorkerOption.js"></script>
     <script src="js/video.js"></script>
     <script src="js/position.js"></script>
